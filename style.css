@@ -7,26 +7,25 @@ body {
 header {
     background-color: #fff;
     color: #000000;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
-.title {
-    font-size: 24px;
-    position: absolute;
-    left: 3px; /* Adjust the distance from the left edge */
+.header-left{
+    display: flex;
+    align-items: center;
 }
 
-.logo img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+.header-left img {
+   width: 250px;  /* Adjust the width as needed */
+    height: Auto; /* Maintain aspect ratio */
   }
+
 
 .header-right {
     display: flex;
-    align-items: center;
+    align-items: left;
     margin-right: 5px;
     justify-content: space-between;
 
@@ -59,22 +58,73 @@ nav {
     display: flex;
     justify-content: center;
     padding: 10px;
-    margin-left: 12cm; /* Add space between title and nav bar */
+    margin-right:10px;
 
 }
-nav a {
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative; /* Required for positioning the dropdown content */
+    /* margin-right: 20px; Add some spacing between menu items */
+}
+
+nav ul li > a[href="#navbar-item"]  {
     color: #000000;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
     margin: 0 30px;
+    padding: 15px 15px;
     transition: color 0.2s; 
 }
 
-nav a:hover {
-    background-color: #fcb900;
-    /* color: #fcb900; Change the color to yellow on hover */
+nav ul li:hover > a[href="#navbar-item"]  {
+    border: 2px solid #f39c12;
 }
+/* Hide the dropdown content by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fcb900;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 180px;
+    z-index: 1;
+}
+
+/* Show the dropdown content on hover */
+nav ul li:hover .dropdown-content {
+    display: block; /* Change display to flex */
+    text-align: left;
+    text-decoration: none;
+}
+
+/* Style the dropdown menu items */
+.dropdown-content li {
+    margin: 10px 20px;
+}
+
+.dropdown-content li a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Style the dropdown menu items on hover */
+.dropdown-content li:hover {
+    background-color: #f1f1f1;
+    display: block;
+
+}
+.dropdown-content li a:hover {
+    border: none;
+}
+
 
 section {
     padding: 20px;
@@ -222,8 +272,8 @@ ul li {
 
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #000000;
     padding: 30px;
 }
 
@@ -240,8 +290,8 @@ footer {
 }
 
 .organization img {
-    width: 50px; /* Adjust the size of the organization logo as needed */
-    height: 50px; /* Adjust the size of the organization logo as needed */
+    width: 175px; /* Adjust the size of the organization logo as needed */
+    height: 100px; /* Adjust the size of the organization logo as needed */
     margin-right: 10px;
     margin-left: 20px;
     vertical-align: middle;
@@ -283,6 +333,7 @@ ul li {
     /* margin-right: 10px; */
     margin-left: 30px; /* Add spacing between the columns */
 }
+
 
 /* .footer-row .footer-column:first-child p {
     display: inline-block; /* Display the paragraphs on the same line */
