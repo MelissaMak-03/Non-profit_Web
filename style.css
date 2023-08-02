@@ -274,14 +274,14 @@ ul li {
 footer {
     background-color: #fff;
     color: #000000;
-    padding: 30px;
+    padding: 10px;
 }
 
 .footer-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .organization {
